@@ -24,6 +24,7 @@
     }
   },
   "local": {
+    "hosts": "localhost:27017",
     "database": "ll_migrate_local",
     "sourceDumpLocation": "./dumps/source",
     "targetDumpLocation": "./dumps/target"

@@ -1,7 +1,7 @@
 const mongodb = require('mongodb');
 const config = require('./config');
 const logStep = require('./logStep');
-const mongoUrl = `mongodb://localhost:27017/${config.local.database}`;
+const mongoUrl = `mongodb://${config.local.hosts}/${config.local.database}`;
 module.exports = (log, fn) =>
   mongodb.MongoClient.connect(mongoUrl, {
     socketOptions: {

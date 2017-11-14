@@ -15,7 +15,7 @@ const rmdir = (dir) =>
 
 const dropDatabase = () =>
   new Promise((resolve, reject) => {
-    const mongoUrl = `mongodb://localhost:27017/${config.local.database}`;
+    const mongoUrl = `mongodb://${config.local.hosts}/${config.local.database}`;
     mongodb.MongoClient.connect(mongoUrl, (err, db) => {
       if (err) return reject(err);
       resolve(db.dropDatabase().then(() => {
